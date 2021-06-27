@@ -11,4 +11,4 @@
 #SBATCH --mail-user=W.Booth-Clibborn@exeter.ac.uk # email address
 #Commands you wish to run must go here, after the SLURM directives
 sleep 10
-echo Hello World
+python3 hello.py
