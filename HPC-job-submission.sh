@@ -10,5 +10,5 @@
 #SBATCH --mail-type=END # send email at job completion
 #SBATCH --mail-user=W.Booth-Clibborn@exeter.ac.uk # email address
 #Commands you wish to run must go here, after the SLURM directives
-sleep 10
-python3 hello.py
+
+python hello.py
