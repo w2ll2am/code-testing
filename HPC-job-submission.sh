@@ -11,4 +11,4 @@
 #SBATCH --mail-user=W.Booth-Clibborn@exeter.ac.uk # email address
 #Commands you wish to run must go here, after the SLURM directives
 
-python3 hello.py
+python --version
