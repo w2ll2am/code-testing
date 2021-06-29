@@ -8,7 +8,7 @@
 #SBATCH --ntasks-per-node=8 # specify number of processors per node
 #SBATCH --mem=10G # specify bytes memory to reserve
 #SBATCH --mail-type=END # send email at job completion
-#SBATCH --mail-user=W.Booth-Clibborn@exeter.ac.uk # email address
+#SBATCH --mail-user=arb233@exeter.ac.uk # email address
 #Commands you wish to run must go here, after the SLURM directives
 
 python hello.py
