@@ -53,7 +53,7 @@ def replace_inplace(filename, find, replace):
         file.write(filedata)
 
 def dedalusPipeline(run_name):
-    subprocess.run(["bash", f"{run_name}/ISCA_Submission.sh"])
+    subprocess.run(["sbatch", f"{run_name}/ISCA_Submission.sh"])
 
 run = 1
 anotherRun = True
