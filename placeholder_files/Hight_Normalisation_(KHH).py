@@ -26,7 +26,7 @@ logger = logging.getLogger(__name__)
 
 #Aspect ratio 2
 Lx, Lz = (1.0, 1.0)
-nx, nz = (1024,1024)
+nx, nz = (512,512)
 
 # Create bases and domain
 x_basis = de.Fourier('x', nx, interval=(0, Lx), dealias=3/2)
@@ -214,7 +214,7 @@ else:
 #Integration parameters and CFL
 solver.stop_sim_time  = 20000.01
 solver.stop_wall_time = np.inf
-solver.stop_iteration = 5000
+solver.stop_iteration = 50000
 
 initial_dt = 0.02*Lx/nx
 #cfl        = flow_tools.CFL(solver,initial_dt=0.01,cadence=10,safety=1.5,max_change=1.0,min_change=0.1,max_dt=0.1)
