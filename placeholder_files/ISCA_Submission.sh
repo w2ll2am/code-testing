@@ -2,8 +2,8 @@
 #SBATCH --export=ALL # export all environment variables to the batch job
 #SBATCH -D . # set working directory to .
 #SBATCH -p pq # submit to the parallel queue
-#SBATCH --time=6:00:00 # maximum walltime for the job
-#SBATCH -A Reseach_Project-CEMPS-00006 # research project to submit under
+#SBATCH --time=00:20:00 # maximum walltime for the job
+#SBATCH -A Research_Project-CEMPS-00006 # research project to submit under
 #SBATCH --nodes=1 # specify number of nodes
 #SBATCH --ntasks-per-node=$1 # specify number of processors per node
 #SBATCH --mem=16GB # specify bytes memory to reserve
@@ -18,5 +18,5 @@ module load FFmpeg/4.2.2-GCCcore-9.3.0
 
 mpirun -np $1 python3 "Hight_Normalisation_(KHH).py"
 python3 merge.py snapshots
-python3 plot.py
-ffmpeg -framerate 25 -i plot%04d.png -c:v libx264 -profile:v high -crf 20 -pix_fmt yuv420p Animation.mp4
+python3 Plot_Disc.py
+ffmpeg -framerate 25 -i plots/plot%04d.png -c:v libx264 -profile:v high -crf 20 -pix_fmt yuv420p Animation.mp4

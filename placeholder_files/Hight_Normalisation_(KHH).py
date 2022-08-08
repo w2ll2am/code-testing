@@ -212,9 +212,9 @@ else:
     fh_mode = 'append'
 
 #Integration parameters and CFL
-solver.stop_sim_time  = 20000.01
+solver.stop_sim_time  = 10
 solver.stop_wall_time = np.inf
-solver.stop_iteration = 50000
+solver.stop_iteration = np.inf
 
 initial_dt = 0.02*Lx/nx
 #cfl        = flow_tools.CFL(solver,initial_dt=0.01,cadence=10,safety=1.5,max_change=1.0,min_change=0.1,max_dt=0.1)
