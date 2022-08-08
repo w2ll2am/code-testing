@@ -13,7 +13,7 @@
 
 
 module load DEDALUS/2.2006-foss-2020a 
-module load gmpich/2017.08
+# module load gmpich/2017.08
 # module load 
 
 mpirun -np $1 python3 "Hight_Normalisation_(KHH).py"
