@@ -26,7 +26,7 @@ logger = logging.getLogger(__name__)
 
 #Aspect ratio 2
 Lx, Lz = (1.0, 1.0)
-nx, nz = (512,512)
+nx, nz = (256,256)
 
 # Create bases and domain
 x_basis = de.Fourier('x', nx, interval=(0, Lx), dealias=3/2)
@@ -212,7 +212,7 @@ else:
     fh_mode = 'append'
 
 #Integration parameters and CFL
-solver.stop_sim_time  = 10
+solver.stop_sim_time  = 40
 solver.stop_wall_time = np.inf
 solver.stop_iteration = np.inf
 

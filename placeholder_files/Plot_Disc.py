@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import matplotlib
 
 #Plot settings
-dpi    = 350
+dpi    = 200
 ext    = '.h5'
 outdir = 'plots'
 start  = 0
