@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import matplotlib
 
 #Plot settings
-dpi    = 200
+dpi    = $00
 ext    = '.h5'
 outdir = 'plots'
 start  = 0
@@ -38,7 +38,7 @@ for files in all_files:
                 time  = file['scales/sim_time'][0]
                 
                 #Plot data	
-                cmap    = plt.get_cmap('magma') # Can change colour scheme
+                cmap    = plt.get_cmap('$01') # Can change colour scheme
                 fig     = plt.figure(figsize=(24,12))
                 lambda1 = 1
                 fig.suptitle("t = {:4.3f}$T_0$".format((0.5*lambda1/np.pi)*time), fontsize=24)

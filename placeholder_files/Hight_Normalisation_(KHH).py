@@ -26,7 +26,7 @@ logger = logging.getLogger(__name__)
 
 #Aspect ratio 2
 Lx, Lz = (1.0, 1.0)
-nx, nz = (256,256)
+nx, nz = ($00,$01)
 
 # Create bases and domain
 x_basis = de.Fourier('x', nx, interval=(0, Lx), dealias=3/2)
@@ -75,14 +75,14 @@ de.operators.parseables['St'] = Stokes
 problem = de.IVP(domain, variables=['p','u','v','w','uz','vz','wz','ud','vd','wd','udz','vdz','wdz','bd','bdz'])
 
 # Set problem parameters
-Reynolds = 2e-6
-Schmidt  = 1.0
-shear    = 1.5
-St0      = 0.05
-Lambda   = 0.05
+Reynolds = $03
+Schmidt  = $04
+shear    = $05
+St0      = $06
+Lambda   = $07
 Lambda2  = Lambda*Lambda
-bd0      = 0.1
-eta      = 5e-2
+bd0      = $08
+eta      = $09
 St0      = St0/Lambda
 problem.parameters['R']       = Reynolds
 problem.parameters['F']       = F = Reynolds*Schmidt
@@ -203,7 +203,7 @@ if not pathlib.Path('restart.h5').exists():
     wd.differentiate('z',out=wdz)
     bd.differentiate('z',out=bdz)
 
-    dt = 0.005
+    dt = $10
     fh_mode = 'overwrite'
 
 else:
@@ -212,7 +212,7 @@ else:
     fh_mode = 'append'
 
 #Integration parameters and CFL
-solver.stop_sim_time  = 40
+solver.stop_sim_time  = $02
 solver.stop_wall_time = np.inf
 solver.stop_iteration = np.inf
 
